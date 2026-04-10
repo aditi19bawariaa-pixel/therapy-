@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditi Bawaria | Unfiltered Minds</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #f2ede4;
+            --text: #1a1a1a;
+            --accent-pink: #d4a3a3;
+            --sage: #84967e;
+            --line: rgba(26, 26, 26, 0.15);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+        
+        body { 
+            background-color: var(--bg); 
+            color: var(--text); 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .name-heading { font-family: 'Playfair Display', serif; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+        section { padding: 100px 0; border-bottom: 1px solid var(--line); position: relative; }
+
+        /* Floating WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            z-index: 1000;
+            text-decoration: none;
+            font-size: 28px;
+        }
+
+        /* Navigation */
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 40px 0; border-bottom: 1px solid var(--line); }
+        .logo-area { line-height: 1.1; }
+        .nav-links a { text-decoration: none; color: var(--text); margin-left: 35px; font-size: 0.85rem; font-weight: 500; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* Hero Section */
+        .hero { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: center; border-bottom: 1px solid var(--line); }
+        .hero h1 { font-size: 6rem; line-height: 0.8; margin-bottom: 10px; letter-spacing: -2px; }
+        .hero h2 { font-size: 2rem; font-weight: 400; color: var(--accent-pink); margin-bottom: 30px; font-style: italic; }
+        .hero-desc { font-size: 1.15rem; max-width: 480px; margin-bottom: 40px; color: #333; font-weight: 400; }
+        
+        .cta-group { display: flex; gap: 20px; align-items: center; }
+        .btn { padding: 18px 35px; border-radius: 50px; text-decoration: none; font-size: 0.9rem; font-weight: 600; transition: 0.3s; }
+        .btn-solid { background: var(--sage); color: white; }
+
+        .hero-image img { width: 100%; height: auto; display: block; }
+
+        /* Services Grid */
+        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-top: 50px; }
+        .card { 
+            background: rgba(255, 255, 255, 0.4); 
+            border: 1px solid var(--line); 
+            padding: 50px 40px; 
+            border-radius: 2px;
+        }
+        .card h3 { font-size: 1.6rem; margin-bottom: 15px; color: var(--sage); }
+        .card .duration { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--accent-pink); font-weight: 700; }
+
+        /* About Section */
+        .about-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 80px; align-items: center; }
+        .about-image img { width: 100%; border-radius: 0; display: block; box-shadow: 20px 20px 0px var(--accent-pink); }
+        .about-content h2 { font-size: 3.5rem; margin-bottom: 25px; }
+        .about-content p { margin-bottom: 20px; font-size: 1.1rem; }
+
+        /* Impact Section */
+        .impact { background-color: #ede7db; text-align: center; border-bottom: none; }
+        .impact h2 { font-size: 2.8rem; margin-bottom: 50px; }
+        .pill-box { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; max-width: 1000px; margin: 0 auto; }
+        .pill { padding: 12px 28px; border: 1px solid var(--text); border-radius: 50px; font-size: 0.9rem; font-weight: 500; }
+
+        /* Footer */
+        footer { padding: 80px 0 40px; }
+        .footer-main { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 60px; margin-bottom: 60px; }
+        .footer-col h4 { margin-bottom: 20px; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; }
+        .footer-col p, .footer-col a { display: block; text-decoration: none; color: #444; margin-bottom: 8px; font-size: 0.9rem; }
+        .copyright { padding-top: 40px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; font-size: 0.75rem; opacity: 0.6; }
+
+        @media (max-width: 992px) {
+            .hero, .about-grid, .grid-3, .footer-main { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 4rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="https://wa.me/919770494303" class="whatsapp-float" target="_blank">WP</a>
+
+    <div class="container">
+        <nav>
+            <div class="logo-area"><strong>ADITI BAWARIA</strong><br><small>UNFILTERED MINDS</small></div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#sessions">Sessions</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+
+        <section class="hero" style="border-bottom: none; padding-bottom: 50px;">
+            <div class="hero-content">
+                <h1>Aditi <br>Bawaria</h1>
+                <h2>Unfiltered Minds</h2>
+                <p class="hero-desc">
+                    A professional therapeutic space grounded in existential depth and psychological clarity. Dedicated to navigating the complexities of the human experience through authentic dialogue.
+                </p>
+                <div class="cta-group">
+                    <a href="https://wa.me/919770494303" class="btn btn-solid">Book a Session</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="graffiti.png" alt="Unfiltered Minds Visual">
+            </div>
+        </section>
+
+        <section id="sessions">
+            <h2 style="font-size: 3rem; margin-bottom: 10px;">The Approach</h2>
+            <p style="margin-bottom: 50px; font-size: 1.1rem;">An existential framework focused on honest inquiry and psychological autonomy.</p>
+            <div class="grid-3">
+                <div class="card">
+                    <h3>Individual Coaching</h3>
+                    <p>Focused sessions for students and professionals seeking psychological autonomy and clarity.</p>
+                    <span class="duration">45 Minutes</span>
+                </div>
+                <div class="card">
+                    <h3>Couples Therapy</h3>
+                    <p>Navigating relational complexities through structured existential inquiry and honest communication.</p>
+                    <span class="duration">90 Minutes</span>
+                </div>
+                <div class="card">
+                    <h3>Career Counselling</h3>
+                    <p>Professional guidance for those navigating major transitions or seeking long term purpose.</p>
+                    <span class="duration">By Appointment</span>
+                </div>
+            </div>
+            <p style="margin-top: 40px; font-size: 0.9rem; font-style: italic; opacity: 0.8;">Pricing shared upon request. Mode: Online and Offline.</p>
+        </section>
+
+        <section id="about">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="mi1.png" alt="Aditi Bawaria">
+                </div>
+                <div class="about-content">
+                    <h2>Meet Aditi</h2>
+                    <p style="color: var(--sage); font-weight: 600;">Life Coach | M.A. Psychology (RNTU 2024-2026)</p>
+                    <p>Currently serving as a Psychology Intern, with prior experience as a Special Education Intern at Sneh Niketan School in Jabalpur.</p>
+                    <p>My methodology is strictly existential. I prioritize the raw reality of your experience over scripted advice. We address the core truths of being alive to establish a foundation for genuine change and meaning.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section class="impact">
+        <div class="container">
+            <h2>A space for those ready to...</h2>
+            <div class="pill-box">
+                <div class="pill">Trauma Recovery</div>
+                <div class="pill">Childhood Wounds</div>
+                <div class="pill">Sexual Assault Support</div>
+                <div class="pill">Navigate Anxiety</div>
+                <div class="pill">Understand Overthinking</div>
+                <div class="pill">Heal Within Relationships</div>
+                <div class="pill">Find Career Purpose</div>
+                <div class="pill">Explore Existential Questions</div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <section id="reflections">
+            <h2 style="font-size: 3rem; margin-bottom: 50px;">Reflections</h2>
+            <div class="grid-3">
+                <div class="card" style="border:none; padding: 0;">
+                    <p style="font-style: italic;">"Aditi provides a space where I do not have to perform. It is the most honest hour of my week."</p>
+                    <p><strong>— Student</strong></p>
+                </div>
+                <div class="card" style="border:none; padding: 0;">
+                    <p style="font-style: italic;">"The existential focus helped me stop looking for right answers and start making real choices."</p>
+                    <p><strong>— Professional</strong></p>
+                </div>
+                <div class="card" style="border:none; padding: 0;">
+                    <p style="font-style: italic;">"A rare balance of professional integrity and profound psychological depth."</p>
+                    <p><strong>— 1:1 Client</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <footer id="contact">
+            <div class="footer-main">
+                <div class="footer-col">
+                    <div class="logo-area"><strong>ADITI BAWARIA</strong></div>
+                    <p style="margin-top:20px;">
+                        861/10, Anushree Parisar Street 03<br>
+                        Bilheri, Jabalpur<br>
+                        Offline availability: Jabalpur & Bhopal
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>Direct Contact</h4>
+                    <p>aditi19bawariaa@gmail.com</p>
+                    <p>+91 97704 94303</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Office Hours</h4>
+                    <p>Monday — Saturday</p>
+                    <p>11:00 AM — 07:00 PM</p>
+                    <p>By Appointment Only</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2026 Aditi Bawaria. Unfiltered Minds.</p>
+                <p>Jabalpur | Bhopal</p>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>
