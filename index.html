@@ -77,10 +77,12 @@ section{padding:6rem 4rem}
 /* ── HERO DESKTOP ── */
 #hero{
   min-height:100vh;
+  max-height:100vh;
   display:grid;
   grid-template-columns:1fr 1fr;
   padding-top:70px;
   background:var(--cream);
+  overflow:hidden;
 }
 .hero-left{
   display:flex;flex-direction:column;justify-content:center;
@@ -99,11 +101,11 @@ section{padding:6rem 4rem}
 /* hero right — full bleed image on desktop */
 .hero-right{
   position:relative;overflow:hidden;background:var(--cream2);
+  display:flex;align-items:center;justify-content:center;
 }
 .hero-right img{
   width:100%;height:100%;
-  object-fit:cover;object-position:center top;
-  filter:sepia(8%) saturate(90%);
+  object-fit:contain;
   display:block;
 }
 .hero-img-card{
@@ -275,8 +277,8 @@ footer{background:#1c1409;padding:3rem 4rem;border-top:1px solid rgba(201,137,12
   section{padding:4rem 2rem}
   #hero{grid-template-columns:1fr;min-height:auto;padding-top:65px}
   .hero-left{padding:3rem 2rem 2rem;order:1}
-  .hero-right{order:2;height:60vw;max-height:420px}
-  .hero-right img{width:100%;height:100%;object-fit:cover;object-position:center top}
+  .hero-right{height:50vw;max-height:380px;display:flex;align-items:center;justify-content:center;background:var(--cream2)}
+  .hero-right img{width:100%;height:100%;object-fit:contain}
   #about{grid-template-columns:1fr;gap:2rem;padding:4rem 2rem}
   .about-img{max-width:320px;margin:0 auto}
   .approach-grid{grid-template-columns:1fr 1fr}
